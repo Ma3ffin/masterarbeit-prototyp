@@ -1,0 +1,26 @@
+{% set consultant = __SELF__.consultant %}
+{% set criterias = __SELF__.criterias %}
+
+{% if consultant is not empty %}
+<div class="row">
+    {% if consultant.picture is not empty %}
+    <div class="col-md-4"><img class="img-circle img-thumbnail" src="{{ consultant.picture.path }}" /></div>
+    {% endif %}
+    <div class="col-md-8">
+        <h1>{{ consultant.firstname }} {{ consultant.lastname }}</h1>
+        <div>{{ 'mwoller.consultmenow::lang.general_rating' | trans }}: {% partial __SELF__ ~ '::stars' rating=consultant.general_rating %}</div>
+        <h4>{{ 'mwoller.consultmenow::lang.criteria_rating' | trans }}: </h4>
+        {% if criterias is not empty %}
+            <ul class="criteria-list">
+                {% for criteria in criterias %}
+                    <li>
+                        {% partial __SELF__ ~ '::stars' rating=consultant.getCriteriaRatingSum(criteria) %} {{ criteria.name }}
+                    </li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+        <a class="btn btn-primary" href="{{ __SELF__.ratingPage | page({id: consultant.id}) }}" role="button">{{ 'mwoller.consultmenow::lang.rate' | trans }}</a>
+
+    </div>
+</div>
+{% endif %}

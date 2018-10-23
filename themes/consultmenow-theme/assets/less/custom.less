@@ -1,0 +1,65 @@
+
+#site {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+
+  #footer{
+    background-color: lightgrey;
+    padding: 20px;
+  }
+
+  #layout-content{
+    margin: 50px 0;
+    flex: 1;
+  }
+
+  .rating{
+    margin: 0 5px;
+    .fa-star{
+      color: lightgrey;
+      &.checked{
+        color: gold;
+      }
+    }
+  }
+
+  ul{
+    list-style: none;
+    padding-left: 0;
+  }
+
+  .star-rating {
+    direction: rtl;
+    display: inline-block;
+    padding: 5px 20px;
+  }
+
+  .star-rating input[type=radio] {
+    display: none
+  }
+
+  .star-rating label {
+    color: lightgrey;
+    font-size: 18px;
+    padding: 0;
+    cursor: pointer;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out
+  }
+
+  .star-rating label:hover,
+  .star-rating label:hover ~ label,
+  .star-rating input[type=radio]:checked ~ label {
+    color: gold
+  }
+
+  .rating-alert {
+    &.alert-danger{
+      margin-left: 20px;
+    }
+  }
+}
+
+
+

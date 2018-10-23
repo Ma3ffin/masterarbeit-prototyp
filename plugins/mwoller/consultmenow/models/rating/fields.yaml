@@ -1,0 +1,16 @@
+fields:
+    consultant:
+        label: 'mwoller.consultmenow::lang.consultant'
+        span: auto
+        nameFrom: name
+        type: relation
+    user:
+        label: 'mwoller.consultmenow::lang.username'
+        span: auto
+        nameFrom: username
+        type: relation
+    criteriaratings:
+        label: 'mwoller.consultmenow::lang.criteriaratings'
+        type: partial
+        context:
+        - update

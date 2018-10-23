@@ -1,0 +1,11 @@
+# ===================================
+#  Relation Behavior Config
+# ===================================
+
+criteriaratings:
+  label: 'mwoller.consultmenow::lang.criteriaratings'
+  view:
+    list: ~/plugins/mwoller/consultmenow/models/criteriarating/columns.yaml
+    toolbarButtons: false
+    showSearch: true
+    showCheckboxes: false

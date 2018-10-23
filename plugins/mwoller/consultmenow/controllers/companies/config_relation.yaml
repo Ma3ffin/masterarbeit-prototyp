@@ -1,0 +1,12 @@
+# ===================================
+#  Relation Behavior Config
+# ===================================
+
+consultants:
+  label: 'mwoller.consultmenow::lang.consultants'
+  view:
+    list: ~/plugins/mwoller/consultmenow/models/consultant/columns.yaml
+    toolbarButtons: false
+    showSearch: true
+    showCheckboxes: false
+    recordUrl: mwoller/consultmenow/consultants/update/:id

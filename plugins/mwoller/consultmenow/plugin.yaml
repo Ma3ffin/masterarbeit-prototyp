@@ -1,0 +1,42 @@
+plugin:
+    name: 'mwoller.consultmenow::lang.plugin.name'
+    description: 'mwoller.consultmenow::lang.plugin.description'
+    author: mwoller
+    icon: oc-icon-star
+    homepage: ''
+permissions:
+    consultmenow:
+        tab: 'mwoller.consultmenow::lang.consultmenow'
+        label: 'mwoller.consultmenow::lang.consultmenow'
+navigation:
+    consultmenow:
+        label: 'mwoller.consultmenow::lang.consultmenow'
+        url: mwoller/consultmenow/consultants
+        icon: icon-check
+        permissions:
+            - consultmenow
+        sideMenu:
+            consultant:
+                label: 'mwoller.consultmenow::lang.consultants'
+                url: mwoller/consultmenow/consultants
+                icon: icon-users
+                permissions:
+                    - consultmenow
+            company:
+                label: 'mwoller.consultmenow::lang.companies'
+                url: mwoller/consultmenow/companies
+                icon: icon-building
+                permissions:
+                    - consultmenow
+            rating:
+                label: 'mwoller.consultmenow::lang.ratings'
+                url: mwoller/consultmenow/ratings
+                icon: icon-star
+                permissions:
+                    - consultmenow
+            criteria:
+                label: 'mwoller.consultmenow::lang.criterias'
+                url: mwoller/consultmenow/criterias
+                icon: icon-subscript
+                permissions:
+                    - consultmenow

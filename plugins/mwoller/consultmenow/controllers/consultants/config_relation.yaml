@@ -1,0 +1,12 @@
+# ===================================
+#  Relation Behavior Config
+# ===================================
+
+ratings:
+  label: 'mwoller.consultmenow::lang.ratings'
+  view:
+    list: ~/plugins/mwoller/consultmenow/models/rating/columns.yaml
+    toolbarButtons: false
+    showSearch: true
+    showCheckboxes: false
+    recordUrl: mwoller/consultmenow/ratings/update/:id

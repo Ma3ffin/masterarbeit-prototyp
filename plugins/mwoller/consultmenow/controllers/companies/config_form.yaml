@@ -1,0 +1,10 @@
+name: 'mwoller.consultmenow::lang.company'
+form: $/mwoller/consultmenow/models/company/fields.yaml
+modelClass: Mwoller\Consultmenow\Models\Company
+defaultRedirect: mwoller/consultmenow/companies
+create:
+    redirect: 'mwoller/consultmenow/companies/update/:id'
+    redirectClose: mwoller/consultmenow/companies
+update:
+    redirect: mwoller/consultmenow/companies
+    redirectClose: mwoller/consultmenow/companies

@@ -1,0 +1,10 @@
+name: 'mwoller.consultmenow::lang.rating'
+form: $/mwoller/consultmenow/models/rating/fields.yaml
+modelClass: Mwoller\Consultmenow\Models\Rating
+defaultRedirect: mwoller/consultmenow/ratings
+create:
+    redirect: 'mwoller/consultmenow/ratings/update/:id'
+    redirectClose: mwoller/consultmenow/ratings
+update:
+    redirect: mwoller/consultmenow/ratings
+    redirectClose: mwoller/consultmenow/ratings

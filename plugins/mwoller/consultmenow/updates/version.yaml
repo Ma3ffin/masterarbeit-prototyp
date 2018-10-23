@@ -1,0 +1,20 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table mwoller_consultmenow_company'
+    - builder_table_create_mwoller_consultmenow_company.php
+1.0.3:
+    - 'Created table mwoller_consultmenow_consultant'
+    - builder_table_create_mwoller_consultmenow_consultant.php
+1.0.4:
+    - 'Created table mwoller_consultmenow_rating'
+    - builder_table_create_mwoller_consultmenow_rating.php
+1.0.5:
+    - 'Created table mwoller_consultmenow_criteria'
+    - builder_table_create_mwoller_consultmenow_criteria.php
+1.0.6:
+    - 'Created table mwoller_consultmenow_criteria_rating'
+    - builder_table_create_mwoller_consultmenow_criteria_rating.php
+1.0.7:
+    - 'Seeder'
+    - ConsultmenowSeeder.php

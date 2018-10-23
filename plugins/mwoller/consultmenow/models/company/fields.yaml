@@ -1,0 +1,21 @@
+fields:
+    name:
+        label: 'mwoller.consultmenow::lang.name'
+        span: full
+        type: text
+    consultants:
+        label: 'mwoller.consultmenow::lang.consultants'
+        type: partial
+        span: auto
+        context:
+        - update
+    picture:
+        label: 'mwoller.consultmenow::lang.picture'
+        mode: image
+        useCaption: false
+        fileTypes: ['png', 'jpg', 'jpeg', 'gif']
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        type: fileupload

@@ -1,0 +1,10 @@
+name: 'mwoller.consultmenow::lang.consultant'
+form: $/mwoller/consultmenow/models/consultant/fields.yaml
+modelClass: Mwoller\Consultmenow\Models\Consultant
+defaultRedirect: mwoller/consultmenow/consultants
+create:
+    redirect: 'mwoller/consultmenow/consultants/update/:id'
+    redirectClose: mwoller/consultmenow/consultants
+update:
+    redirect: mwoller/consultmenow/consultants
+    redirectClose: mwoller/consultmenow/consultants

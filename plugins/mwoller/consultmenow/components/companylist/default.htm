@@ -1,0 +1,11 @@
+{% set companies = __SELF__.all %}
+
+{% if companies is not empty %}
+<ul class="company-list">
+    {% for company in companies %}
+        <li>
+            <h3><a href="{{ __SELF__.companyPage | page({id: company.id}) }}">{{ company.name }}</a></h3>
+        </li>
+    {% endfor %}
+</ul>
+{% endif %}

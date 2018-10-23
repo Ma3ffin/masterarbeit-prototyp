@@ -1,0 +1,10 @@
+name: 'mwoller.consultmenow::lang.criteria'
+form: $/mwoller/consultmenow/models/criteria/fields.yaml
+modelClass: Mwoller\Consultmenow\Models\Criteria
+defaultRedirect: mwoller/consultmenow/criterias
+create:
+    redirect: 'mwoller/consultmenow/criterias/update/:id'
+    redirectClose: mwoller/consultmenow/criterias
+update:
+    redirect: mwoller/consultmenow/criterias
+    redirectClose: mwoller/consultmenow/criterias

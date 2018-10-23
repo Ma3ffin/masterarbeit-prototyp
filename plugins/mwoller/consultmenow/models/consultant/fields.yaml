@@ -1,0 +1,30 @@
+fields:
+    firstname:
+        label: 'mwoller.consultmenow::lang.firstname'
+        span: auto
+        type: text
+    lastname:
+        label: 'mwoller.consultmenow::lang.lastname'
+        span: auto
+        type: text
+    company:
+        label: 'mwoller.consultmenow::lang.company'
+        span: full
+        nameFrom: name
+        type: relation
+    ratings:
+        label: 'mwoller.consultmenow::lang.ratings'
+        type: partial
+        span: auto
+        context:
+        - update
+    picture:
+        label: 'mwoller.consultmenow::lang.picture'
+        mode: image
+        useCaption: false
+        fileTypes: ['png', 'jpg', 'jpeg', 'gif']
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        type: fileupload

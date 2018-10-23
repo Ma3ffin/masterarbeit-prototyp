@@ -1,0 +1,20 @@
+columns:
+    consultant_name:
+        label: 'mwoller.consultmenow::lang.consultant'
+        type: text
+        searchable: true
+        sortable: true
+        relation: consultant
+        select: concat(firstname,' ', lastname)
+    user_name:
+        label: 'mwoller.consultmenow::lang.username'
+        type: text
+        searchable: true
+        sortable: true
+        relation: user
+        select: username
+    _general_rating:
+        label: 'mwoller.consultmenow::lang.general_rating'
+        type: number
+        searchable: false
+        sortable: false

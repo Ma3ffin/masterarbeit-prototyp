@@ -1,0 +1,13 @@
+columns:
+    criteria_name:
+        label: 'mwoller.consultmenow::lang.criteria'
+        type: text
+        searchable: true
+        sortable: true
+        relation: criteria
+        select: name
+    value:
+        label: 'mwoller.consultmenow::lang.value'
+        type: number
+        searchable: true
+        sortable: true

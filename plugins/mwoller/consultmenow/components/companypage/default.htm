@@ -1,0 +1,23 @@
+{% set company = __SELF__.company %}
+
+{% if company is not empty %}
+<div class="row">
+    {% if company.picture is not empty %}
+    <div class="col-md-4"><img class="img-circle img-thumbnail" src="{{ company.picture.path }}" /></div>
+    {% endif %}
+    <div class="col-md-8">
+        <h1>{{ company.name }}</h1>
+        <div>{{ 'mwoller.consultmenow::lang.consultant_rating' | trans }}: {% partial __SELF__ ~ '::stars' rating=company.consultant_rating %}</div>
+        {% if company.consultants is not empty %}
+            <ul class="consultant-list">
+                {% for consultant in company.consultants %}
+                    <li>
+                        <h3><a href="{{ __SELF__.consultantPage | page({id: consultant.id}) }}">{{ consultant.firstname }} {{ consultant.lastname }}</a></h3>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </div>
+</div>
+{% endif %}
+

@@ -1,0 +1,51 @@
+{% set consultant = __SELF__.consultant %}
+{% set criterias = __SELF__.criterias %}
+
+{% if consultant is not empty %}
+<div class="row">
+    {% if consultant.picture is not empty %}
+    <div class="col-md-2"><img class="img-circle img-thumbnail small" src="{{ consultant.picture.path }}" /></div>
+    {% endif %}
+    <div class="col-md-10">
+        <h1>{{ consultant.firstname }} {{ consultant.lastname }}</h1>
+        <h4>{{ 'mwoller.consultmenow::lang.criteria_rating' | trans }}</h4>
+
+        <form role="form" data-request="{{  __SELF__~ '::onSaveRating' }}" data-request-validate data-request-redirect="{{ __SELF__.consultantPage | page({id: consultant.id}) }}">
+            {% if criterias is not empty %}
+                {% for criteria in criterias %}
+                    <div class="row">
+                        <input type="hidden" name="rating[{{ criteria.id }}][criteria]" value="{{criteria.id}}">
+                        <div class="star-rating">
+                            <input id="star-5-{{ criteria.id }}" type="radio" name="rating[{{ criteria.id }}][rating]" value="5">
+                            <label for="star-5-{{ criteria.id }}" title="5">
+                                <i class="active fa fa-star" aria-hidden="true"></i>
+                            </label>
+                            <input id="star-4-{{ criteria.id }}" type="radio" name="rating[{{ criteria.id }}][rating]" value="4">
+                            <label for="star-4-{{ criteria.id }}" title="4">
+                                <i class="active fa fa-star" aria-hidden="true"></i>
+                            </label>
+                            <input id="star-3-{{ criteria.id }}" type="radio" name="rating[{{ criteria.id }}][rating]" value="3">
+                            <label for="star-3-{{ criteria.id }}" title="3">
+                                <i class="active fa fa-star" aria-hidden="true"></i>
+                            </label>
+                            <input id="star-2-{{ criteria.id }}" type="radio" name="rating[{{ criteria.id }}][rating]" value="2">
+                            <label for="star-2-{{ criteria.id }}" title="2">
+                                <i class="active fa fa-star" aria-hidden="true"></i>
+                            </label>
+                            <input id="star-1-{{ criteria.id }}" type="radio" name="rating[{{ criteria.id }}][rating]" value="1">
+                            <label for="star-1-{{ criteria.id }}" title="1">
+                                <i class="active fa fa-star" aria-hidden="true"></i>
+                            </label>
+                        </div>
+                        {{ criteria.name }}
+                        <div class="rating-alert alert alert-danger" data-validate-for="rating.{{ criteria.id }}.rating"></div>
+                    </div>
+                {% endfor %}
+
+            {% endif %}
+            <button type="submit" class="btn btn-primary" role="button">{{ 'mwoller.consultmenow::lang.send' | trans }}</button>
+        </form>
+
+    </div>
+</div>
+{% endif %}

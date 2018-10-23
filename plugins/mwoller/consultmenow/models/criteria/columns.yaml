@@ -1,0 +1,6 @@
+columns:
+    name:
+        label: 'mwoller.consultmenow::lang.name'
+        type: text
+        searchable: true
+        sortable: true
